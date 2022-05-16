@@ -18,4 +18,19 @@ public class MainController {
         return "login";
 }
 
+    @RequestMapping("/new_post")
+    public String new_post(){
+        return "new_post";
+    }
+
+    @RequestMapping("/follow")
+    public String follow(){
+        return "follow";
+    }
+
+    @RequestMapping("/profile")
+    public String profile(){
+        return "profile";
+    }
+
 }
