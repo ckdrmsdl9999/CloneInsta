@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<head>
+<head >
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -15,7 +15,8 @@
 <!--    <link rel="stylesheet" href="../static/css/reset.css">&lt;!&ndash; 쓰고 싶으면 /css/reset.css로써야, /static/까지 스프링부트가 잡아줌&ndash;&gt;-->
 <!--    <link rel="stylesheet" href="../static/css/common.css">&lt;!&ndash;스프링은 처음부터 static 경로를 자동으로 잡아주기 때문에 resource/static 같은 경로를 적어줄 필요가없다.  &ndash;&gt; -->
 <!--    <link rel="stylesheet" href="../static/css/style.css">-->
-
+<!--    <title>Hello</title>-->
+<!--    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />-->
 
 </head>
 <body>
@@ -24,35 +25,7 @@
 <section id="container">
 
 
-    <header id="header">
-        <section class="inner">
-
-            <h1 class="logo">
-                <a href="/index/main">
-                    <div class="sprite_insta_icon"></div>
-                    <div class="sprite_write_logo"></div>
-                </a>
-            </h1>
-
-            <div class="search_box">
-                <input type="text" placeholder="검색" id="search-field">
-
-                <div class="fake_field">
-                    <span class="sprite_small_search_icon"></span>
-                    <span>검색</span>
-                </div>
-            </div>
-
-            <div class="right_icons">
-                <a href="/index/new_post"><div class="sprite_camera_icon"></div></a>
-                <a href="/index/login"><div class="sprite_compass_icon"></div></a>
-                <a href="/index/follow"><div class="sprite_heart_icon_outline"></div></a>
-                <a href="/index/profile"><div class="sprite_user_icon_outline"></div></a>
-            </div>
-
-        </section>
-
-    </header>
+    <header id="header" th:replace="fragments/header :: header">    </header>
 
     <div class="hidden_menu">
         <div class="scroll_inner">
@@ -413,33 +386,7 @@
                                 <div class="time">1시간 전</div>
                             </div>
                         </div>
-                        <div class="thumb_user">
-                            <div class="profile_thumb">
-                                <img src="/imgs/thumb02.jpg" alt="프로필사진">
-                            </div>
-                            <div class="detail">
-                                <div class="id">kind_tigerrrr</div>
-                                <div class="time">1시간 전</div>
-                            </div>
-                        </div>
-                        <div class="thumb_user">
-                            <div class="profile_thumb">
-                                <img src="/imgs/thumb02.jpg" alt="프로필사진">
-                            </div>
-                            <div class="detail">
-                                <div class="id">kind_tigerrrr</div>
-                                <div class="time">1시간 전</div>
-                            </div>
-                        </div>
-                        <div class="thumb_user">
-                            <div class="profile_thumb">
-                                <img src="/imgs/thumb02.jpg" alt="프로필사진">
-                            </div>
-                            <div class="detail">
-                                <div class="id">kind_tigerrrr</div>
-                                <div class="time">1시간 전</div>
-                            </div>
-                        </div>
+
                     </div>
                 </article>
 
